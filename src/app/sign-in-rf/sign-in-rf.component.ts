@@ -32,5 +32,8 @@ export class SignInRfComponent implements OnInit {
     } else if (this.signInForm.value.password.length <= 8) {
       alert('Password value is not accepted!');
     }
+    if (this.signInForm.value.email.includes('@') && this.signInForm.value.password.length > 8) {
+      alert('your personal information is valid!');
+    }
   }
 }
