@@ -1,16 +1,26 @@
 <div class="container">
-  <form class="sign-in-form" [formGroup]="signInForm" autocomplete="off" (ngSubmit)="onSubmit()">
+  <form
+    class="sign-in-form"
+    [formGroup]="signInForm"
+    autocomplete="off"
+    (ngSubmit)="onSubmit()"
+  >
     <h2>Sign in</h2>
     <div class="row-control">
       <mat-form-field appearance="outline">
         <mat-label>Email</mat-label>
-        <input matInput placeholder="Email" formControlName="email">
+        <input matInput placeholder="Email" formControlName="email" />
       </mat-form-field>
     </div>
     <div class="row-control">
       <mat-form-field appearance="outline">
         <mat-label>Password</mat-label>
-        <input type="password" matInput placeholder="Password" formControlName="password">
+        <input
+          type="password"
+          matInput
+          placeholder="Password"
+          formControlName="password"
+        />
       </mat-form-field>
     </div>
     <div class="row-control">
@@ -22,4 +32,3 @@
     <pre>{{ signInForm.value | json }}</pre>
   </form>
 </div>
-
